@@ -7527,7 +7527,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>1-9-26</p>
+<p>1-20-26</p>
 </div>
 </div>
 </div>
@@ -7550,6 +7550,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>This logbook provides a summary of our ChIP-seq analysis pipeline. It includes both the actual commands used to generate the data, as well as clarifying comments throughout.</p>
+<p><strong>EDIT</strong> Polycomb datasets (why? because 777 binds to Polycomb marked bivalent CpG islands in mESCs AND candidate for mediating repression by depositing H3K9me3 by non-canonical PRC1 (Mga/Max) after H3K9ac has been removed by something else (e.g. NurD). Context: We do see K9ac gain and K9me3 loss upon loss of 777 in MEFs but K9me3 is likely not set via canonical KAP1 as we cannot see 777-Kap1 interactions in Co-IPs.</p>
 </div>
 </div>
 </div>
@@ -7565,13 +7566,225 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a605949c-b64c-4c5d-b0b3-3764404e9aa1">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=83257e0d-b4c9-4a1d-b994-6eb9e1672c4b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Data generation: Illumina Indexing Kits (#R400695 and R400697) SMARTer® DNA Single Index Kit was used for the construction of sequencing libraries. This data is reverse stranded data and was sequenced on an Illumina NovaSeq 6000 at the NICHD Molecular Genomics Core Facility.</p>
+<p>Published datasets were acquired from these accession numbers and renamed:</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=04aa9cdc-735a-483b-be0f-d0fb438313c4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<table>
+<caption style="text-align: left;"><strong>Polycomb Datasets</strong></caption>
+<tr>
+<th>Name</th>
+<th>GSE</th>
+<th>GSM</th>
+<th>SRR</th>
+<th>PUBMED</th>
+<th>SAMPLE</th>
+<th>ChIP</th>
+<th>ERR Link</th>
+<th>Reads</th>
+</tr>
+<tr>
+<td>mESC_Mga_Stielow2018</td> <!-- Stielow2018 -->
+<td>E-MTAB-6007</td>
+<td></td>
+<td>ERR2104093</td>
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/29381691/">https://pubmed.ncbi.nlm.nih.gov/29381691/</a></td>
+<td>mESC</td>
+<td>Mga</td>
+<td><a href="https://www.ebi.ac.uk/ena/browser/view/ERR2104093">https://www.ebi.ac.uk/ena/browser/view/ERR2104093</a></td>
+<td>Single</td>
+</tr>
+<tr>
+<td>mESC_Max_Cusack2020_R1</td>
+<td>GSE131366</td>
+<td>GSM3772755</td>
+<td>SRR9074691</td>
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/32963030/">https://pubmed.ncbi.nlm.nih.gov/32963030/</a></td>
+<td>mESC</td>
+<td>Max</td>
+<td></td>
+<td>Paired</td>
+</tr>
+<tr>
+<td>mESC_Max_Cusack2020_R2</td>
+<td></td>
+<td></td>
+<td>SRR9074692,SRR9074693,SRR9074694</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mESC_Ring1b_Fursova2019_R1</td> <!-- Name -->
+<td>GSE119620</td> <!-- GSE -->
+<td>GSM3379353</td> <!-- GSM -->
+<td>SRR7799086</td> <!-- SRR -->
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/31029541/">https://pubmed.ncbi.nlm.nih.gov/31029541/</a></td> <!-- PUBMED -->
+<td>mESC</td> <!-- SAMPLE -->
+<td>Ring1b</td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td>PAIRED</td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Ring1b_Fursova2019_R2</td> <!-- Name -->
+<td></td> <!-- GSE -->
+<td></td> <!-- GSM -->
+<td></td> <!-- SRR -->
+<td><a href=""></a></td> <!-- PUBMED -->
+<td></td> <!-- SAMPLE -->
+<td></td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td></td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Kdm2b_Blackledge2014</td> <!-- Name -->
+<td>GSE40860</td> <!-- GSE -->
+<td>GSM1003594</td> <!-- GSM -->
+<td>SRR568018</td> <!-- SRR -->
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/23256043/">https://pubmed.ncbi.nlm.nih.gov/23256043/</a></td> <!-- PUBMED -->
+<td>mESC</td> <!-- SAMPLE -->
+<td>Kdm2b</td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td>SINGLE</td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Pcgf2_Fursova2019_R1</td> <!-- Name -->
+<td>GSE119620</td> <!-- GSE -->
+<td>GSM3581139</td> <!-- GSM -->
+<td>SRR5479629</td> <!-- SRR -->
+<td>https://pubmed.ncbi.nlm.nih.gov/31029541/<a href=""></a></td> <!-- PUBMED -->
+<td>mESC</td> <!-- SAMPLE -->
+<td>Pcgf2</td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td>PAIRED</td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Pcgf2_Fursova2019_R2</td> <!-- Name -->
+<td></td> <!-- GSE -->
+<td></td> <!-- GSM -->
+<td></td> <!-- SRR -->
+<td><a href=""></a></td> <!-- PUBMED -->
+<td></td> <!-- SAMPLE -->
+<td></td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td></td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Pcgf6_Stielow2018</td> <!-- Name -->
+<td>E-MTAB-6007</td> <!-- GSE -->
+<td></td> <!-- GSM -->
+<td>ERR2104094</td> <!-- SRR -->
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/29381691/">https://pubmed.ncbi.nlm.nih.gov/29381691/</a></td> <!-- PUBMED -->
+<td>mESCs</td> <!-- SAMPLE -->
+<td>Pcgf6</td> <!-- ChIP -->
+<td><a href="https://www.ebi.ac.uk/ena/browser/view/ERR2104094">https://www.ebi.ac.uk/ena/browser/view/ERR2104094</a></td> <!-- ERR link -->
+<td>Single</td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Aebp2_Grijzenhout2016_R1</td> <!-- Name -->
+<td>GSE83082</td> <!-- GSE -->
+<td>GSM2192636</td> <!-- GSM -->
+<td>SRR3644943</td> <!-- SRR -->
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/27317809/">https://pubmed.ncbi.nlm.nih.gov/27317809/</a></td> <!-- PUBMED -->
+<td></td> <!-- SAMPLE -->
+<td></td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td>PAIRED</td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Aebp2_Grijzenhout2016_R2</td> <!-- Name -->
+<td>GSE18371</td> <!-- GSE -->
+<td>GSM459273</td> <!-- GSM -->
+<td>SRR031669</td> <!-- SRR -->
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/19884255/">https://pubmed.ncbi.nlm.nih.gov/19884255/</a></td> <!-- PUBMED -->
+<td>mESC</td> <!-- SAMPLE -->
+<td>Setdb1</td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td>SINGLE</td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_Setdb1_Bilodeau2009</td> <!-- Name -->
+<td></td> <!-- GSE -->
+<td></td> <!-- GSM -->
+<td></td> <!-- SRR -->
+<td><a href=""></a></td> <!-- PUBMED -->
+<td></td> <!-- SAMPLE -->
+<td></td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td></td> <!-- Reads -->
+</tr>
+<tr>
+<td>mESC_H2AK119ub1</td> <!-- Name -->
+<td>GSE83093</td> <!-- GSE -->
+<td>GSM2192962</td> <!-- GSM -->
+<td>SRR3649515,SRR3649516,SRR3649517,SRR3649518</td> <!-- SRR -->
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/27705745/">https://pubmed.ncbi.nlm.nih.gov/27705745/</a></td> <!-- PUBMED -->
+<td>mESC</td> <!-- SAMPLE -->
+<td>H2AK119ub</td> <!-- ChIP -->
+<td><a href=""></a></td> <!-- ERR link -->
+<td>PAIRED</td> <!-- Reads -->
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=af3c348b-bf31-4b77-90ec-2c58a9faee30">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Continue-with-table-creation---%3E">Continue with table creation --&gt;<a class="anchor-link" href="#Continue-with-table-creation---%3E">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4818ecfc-1a28-425f-99d6-3216f9ee9d80">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<table>
+<caption style="text-align: left;"><strong>Gastrulation Datasets</strong></caption>
+<tr>
+<th>Name</th>
+<th>GSE</th>
+<th>GSM</th>
+<th>SRR</th>
+<th>PUBMED</th>
+<th>SAMPLE</th>
+<th>ChIP</th>
+<th>ERR Link</th>
+<th>Reads</th>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8a30b2e-1e8f-41db-accb-a619f567d3a7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>The preliminary analysis was done on the NIH HPC computing cluster (biowulf). <a href="https://hpc.nih.gov/">https://hpc.nih.gov/</a></p>
 <p>I used the GRCh38.p13 human genome gtf and fasta files from GenCode (PRI), see details below for how to obtain those.</p>
 <p>Links for used packages and websites with versions used:</p>
