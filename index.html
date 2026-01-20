@@ -10150,6 +10150,416 @@ bash<span class="w"> </span>deeptools_bamCoverage_mm10.sh<span class="w"> </span
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0be0c1d8-4970-43d1-a5c7-9ca981b895aa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Heatmaps">Heatmaps<a class="anchor-link" href="#Heatmaps">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b9b1a96f-ba6a-4354-bc8b-614e4ab9632b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="hg38-Polycomb-Heatmaps">hg38 Polycomb Heatmaps<a class="anchor-link" href="#hg38-Polycomb-Heatmaps">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dac65514-e0e1-4c2f-a2c3-ef8e2936de06">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We will use the narrowPeak file AS11_hESC_H1_777_rep1_S1.1e-4_peaks.narrowPeak which has 4128 peaks</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=afcadbf1-5079-45d3-973c-585861f3d1fa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Use our team777 hESC 777 ChIP (dir: data/gallegosda/GEO/ChIP-seq/fastq/align_these/aligned/bw/hg38_bw)</p>
+<ul>
+<li>hESC_H1_777_rep1_777_ratioinput.bw</li>
+<li>hESC_H1_777_rep1_777_SeqDepthNorm.bw <strong>&lt;- Use this one</strong></li>
+<li>hESC_H1_777_rep2_777_ratioinput.bw</li>
+<li>hESC_H1_777_rep2_777_SeqDepthNorm.bw</li>
+</ul>
+<p>Use these published datasets too</p>
+<ul>
+<li>hESC_H1_H3K9ac_encode_Bernstein_SeqDepthNorm.bw</li>
+<li>hESC_H1_H3K9me3_encode_Broad_SeqDepthNorm.bw</li>
+<li>hESC_H1_H3K27ac_encode_Bernstein_SeqDepthNorm.bw</li>
+<li>hESC_H1_H3K27me3_encode_Bernstein_SeqDepthNorm.bw</li>
+<li>hESC_H1_H3K36me3_encode_Bernstein_SeqDepthNorm.bw</li>
+<li>hESC_H1_EZH2_encode_Broad_SeqDepthNorm.bw</li>
+<li>hESC_H1_SUZ12_encode_Broad_SeqDepthNorm.bw</li>
+<li>hESCs_H1_Max_Gertz2013_SeqDepthNorm.bw</li>
+<li>hESCs_H1_Kap1_Turelli2020_SeqDepthNorm.bw</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3adb85f1-968d-4ad5-9374-e874298b1ebe">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>nano<span class="w"> </span>generate_polycomb_heatmaps_hg38.swarm
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9f3464c9-4444-4bb9-8031-bdbcd5b6f77e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_H3K9ac_encode_Bernstein
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_H3K9me3_encode_Broad
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_H3K27ac_encode_Bernstein
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_H3K27me3_encode_Bernstein
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_H3K36me3_encode_Bernstein
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_EZH2_encode_Broad
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_SUZ12_encode_Broad
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESCs_H1_Max_Gertz2013
+bash<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESCs_H1_Kap1_Turelli2020
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4cfb1838-74d8-47f2-b5d4-c9e3d13593da">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>nano<span class="w"> </span>generate_polycomb_heatmaps_hg38.sh
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5d82c931-d3c9-4ee9-9200-3e769f6d1d29">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">in_dir_bw</span><span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/fastq/bw
+<span class="nv">in_dir_bed</span><span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps
+<span class="nv">out_dir</span><span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps/hg38_polycomb_heatmaps
+
+computeMatrix<span class="w"> </span>reference-point<span class="w"> </span>--referencePoint<span class="w"> </span>center<span class="w"> </span>-R<span class="w"> </span><span class="nv">$in_dir_bed</span>/<span class="nv">$1</span>_peaks.narrowPeak<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--skipZeros<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--sortRegions<span class="w"> </span>descend<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-S<span class="w"> </span><span class="nv">$in_dir_bw</span>/<span class="nv">$2</span>_SeqDepthNorm.bw<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-b<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-a<span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-o<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--missingDataAsZero<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-p<span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="nv">SLURM_CPUS_PER_TASK</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">))</span><span class="p">;</span>
+plotHeatmap<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-m<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-out<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.png<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--yMin<span class="w"> </span><span class="m">0</span><span class="w"> </span>--yMax<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--labelRotation<span class="w"> </span>-90<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--regionsLabel<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--colorList<span class="w"> </span>darkblue,lightgoldenrodyellow,darkred
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1152c073-b212-4a48-b9e1-fe73b0faee80">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-f<span class="w"> </span>generate_polycomb_heatmaps_hg38.swarm<span class="w"> </span>-g<span class="w"> </span><span class="m">32</span><span class="w"> </span>--threads-per-process<span class="w"> </span><span class="m">16</span><span class="w"> </span>--time<span class="o">=</span><span class="m">12</span>:00:00<span class="w"> </span>--module<span class="w"> </span>deeptools/3.5.0<span class="w"> </span>--logdir<span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps/logs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=94db37e5-99dd-4e30-b131-8da469870731">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="team777-hESC">team777 hESC<a class="anchor-link" href="#team777-hESC">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5a702c9b-1066-421f-9b8b-ddff9bc120c6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>nano<span class="w"> </span>generate_polycomb_heatmaps_team777_hg38.swarm
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c0601b66-30f4-4117-94e9-ce4daf5c9c2c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>bash<span class="w"> </span>generate_polycomb_heatmaps_team777_hg38.sh<span class="w"> </span>AS11_hESC_H1_777_rep1_S1.1e-4<span class="w"> </span>hESC_H1_777_rep1_777
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d9ffd81f-2904-4e8d-8324-289102541eda">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>nano<span class="w"> </span>generate_polycomb_heatmaps_team777_hg38.sh
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d4f6c762-226a-4ee3-886b-d63479b52668">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">in_dir_bw</span><span class="o">=</span>/data/gallegosda/GEO/ChIP-seq/fastq/align_these/aligned/bw/hg38_bw/
+<span class="nv">in_dir_bed</span><span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps
+<span class="nv">out_dir</span><span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps/hg38_polycomb_heatmaps/team777data
+
+computeMatrix<span class="w"> </span>reference-point<span class="w"> </span>--referencePoint<span class="w"> </span>center<span class="w"> </span>-R<span class="w"> </span><span class="nv">$in_dir_bed</span>/<span class="nv">$1</span>_peaks.narrowPeak<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--skipZeros<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--sortRegions<span class="w"> </span>descend<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-S<span class="w"> </span><span class="nv">$in_dir_bw</span>/<span class="nv">$2</span>_SeqDepthNorm.bw<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-b<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-a<span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-o<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--missingDataAsZero<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-p<span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="nv">SLURM_CPUS_PER_TASK</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">))</span><span class="p">;</span>
+plotHeatmap<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-m<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-out<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.png<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--yMin<span class="w"> </span><span class="m">0</span><span class="w"> </span>--yMax<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--labelRotation<span class="w"> </span>-90<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--regionsLabel<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--colorList<span class="w"> </span>darkblue,lightgoldenrodyellow,darkred
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8996e536-24bb-4894-b127-ff22e4136de3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-f<span class="w"> </span>generate_polycomb_heatmaps_team777_hg38.swarm<span class="w"> </span>-g<span class="w"> </span><span class="m">32</span><span class="w"> </span>--threads-per-process<span class="w"> </span><span class="m">16</span><span class="w"> </span>--time<span class="o">=</span><span class="m">12</span>:00:00<span class="w"> </span>--module<span class="w"> </span>deeptools/3.5.0<span class="w"> </span>--logdir<span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps/logs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=61b13772-ce20-4fb4-93d7-32f9a90e8f55">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="mm10">mm10<a class="anchor-link" href="#mm10">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1fcc446b-a79e-4b79-8de9-97a82c325782">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Using these:</p>
+<ul>
+<li>mESC_R1_777_EGFP_floxed_clone_2_GFP_SeqDepthNorm.bw</li>
+<li>mESC_R1_777_EGFP_floxed_clone_3_GFP_SeqDepthNorm.bw</li>
+<li>mESC_R1_777_KO_EGFP_excised_clone_1_GFP_SeqDepthNorm.bw</li>
+<li>mESC_R1_777_KO_EGFP_excised_clone_21_GFP_SeqDepthNorm.bw</li>
+<li>mESC_R1_WT_777_Daniel_SeqDepthNorm.bw</li>
+<li>mESC_R1_777_EGFP_floxed_clone_2_777_EGFP-ChIP_SeqDepthNorm.bw</li>
+<li>mESC_R1_KO_tm1a_cloneM9_777_SeqDepthNorm.bw</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e9b5302f-45fd-4c2a-91a3-e07b07652f68">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>nano<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.swarm
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7b986c56-8429-4638-bdce-061093f474d1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>bash<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh<span class="w"> </span>shared_777_mESC_peaks_EGFP_clone2_3_over_21_3163_mm10_vM25<span class="w"> </span>mESC_R1_777_EGFP_floxed_clone_2_GFP
+bash<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh<span class="w"> </span>shared_777_mESC_peaks_EGFP_clone2_3_over_21_3163_mm10_vM25<span class="w"> </span>mESC_R1_777_EGFP_floxed_clone_3_GFP
+bash<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh<span class="w"> </span>shared_777_mESC_peaks_EGFP_clone2_3_over_21_3163_mm10_vM25<span class="w"> </span>mESC_R1_777_KO_EGFP_excised_clone_1_GFP
+bash<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh<span class="w"> </span>shared_777_mESC_peaks_EGFP_clone2_3_over_21_3163_mm10_vM25<span class="w"> </span>mESC_R1_777_KO_EGFP_excised_clone_21_GFP
+bash<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh<span class="w"> </span>shared_777_mESC_peaks_EGFP_clone2_3_over_21_3163_mm10_vM25<span class="w"> </span>mESC_R1_WT_777_Daniel
+bash<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh<span class="w"> </span>shared_777_mESC_peaks_EGFP_clone2_3_over_21_3163_mm10_vM25<span class="w"> </span>mESC_R1_777_EGFP_floxed_clone_2_777_EGFP-ChIP
+bash<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh<span class="w"> </span>shared_777_mESC_peaks_EGFP_clone2_3_over_21_3163_mm10_vM25<span class="w"> </span>mESC_R1_KO_tm1a_cloneM9_777
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c48fd0c8-b38b-4ac6-a8b4-a6aae730725a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>nano<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.sh
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=00ae91ab-b2a8-4763-a5f7-9c93b27783e0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">in_dir_bw</span><span class="o">=</span>/data/gallegosda/GEO/ChIP-seq/fastq/align_these/aligned/bw/mm10_bw
+<span class="nv">in_dir_bed</span><span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps
+<span class="nv">out_dir</span><span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps/mm10_validation_heatmaps<span class="w">   </span>
+
+computeMatrix<span class="w"> </span>reference-point<span class="w"> </span>--referencePoint<span class="w"> </span>center<span class="w"> </span>-R<span class="w"> </span><span class="nv">$in_dir_bed</span>/<span class="nv">$1</span>.bed<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--skipZeros<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--sortRegions<span class="w"> </span>descend<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-S<span class="w"> </span><span class="nv">$in_dir_bw</span>/<span class="nv">$2</span>_SeqDepthNorm.bw<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-b<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-a<span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-o<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--missingDataAsZero<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-p<span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="nv">SLURM_CPUS_PER_TASK</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">))</span><span class="p">;</span>
+plotHeatmap<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-m<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-out<span class="w"> </span><span class="nv">$out_dir</span>/<span class="nv">$1</span>_<span class="nv">$2</span>_ratio.mat.png<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--yMin<span class="w"> </span><span class="m">0</span><span class="w"> </span>--yMax<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--labelRotation<span class="w"> </span>-90<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--regionsLabel<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--colorList<span class="w"> </span>darkblue,lightgoldenrodyellow,darkred
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=449b04d6-a2f0-48c4-b51d-0898b8b57d0a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-f<span class="w"> </span>generate_mESC_validation_heatmaps_mm10.swarm<span class="w"> </span>-g<span class="w"> </span><span class="m">32</span><span class="w"> </span>--threads-per-process<span class="w"> </span><span class="m">16</span><span class="w"> </span>--time<span class="o">=</span><span class="m">12</span>:00:00<span class="w"> </span>--module<span class="w"> </span>deeptools/3.5.0<span class="w"> </span>--logdir<span class="o">=</span>/data/gallegosda/GEO/Published_ChIP-seq/heatmaps/logs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=21dbf9d5-c031-4ef9-90fa-9be999b9acd8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=07661aaa-fe11-4a01-a7a4-67ba0bfe10bf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </main>
 </body>
 </html>
